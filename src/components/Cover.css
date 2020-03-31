@@ -1,0 +1,48 @@
+
+.Cover{
+    color: red;
+    width: 100%;
+    background-image: url("https://miro.medium.com/max/8000/1*PAdQnQNhMfaRn6IwnQxPhQ.jpeg");
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 480px;
+}
+
+.Cover .Overlay{
+    background-color: rgb(87, 43, 43);
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Cover .Overlay:hover {
+    background: rgba(0,0,0,0.8);
+    transition: 1.5s;
+}
+
+.Cover .Overlay .Quotes{
+    font-family: "Roboto";
+    opacity:0;
+    color: white;
+    width: 55%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 42px;
+    text-align: center;
+    font-weight: 300;
+
+}
+
+.Cover .Overlay:hover .Quotes{
+    opacity: 1 !important;
+    transition: 1.8s;
+
+}
+
