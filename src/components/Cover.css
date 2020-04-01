@@ -11,7 +11,6 @@
 }
 
 .Cover .Overlay{
-    background-color: rgb(87, 43, 43);
     width: 100%;
     height: 100%;
     background: rgba(0,0,0,0);
@@ -22,7 +21,7 @@
 
 .Cover .Overlay:hover {
     background: rgba(0,0,0,0.8);
-    transition: 1.5s;
+    transition: 0.9s;
 }
 
 .Cover .Overlay .Quotes{
@@ -42,7 +41,7 @@
 
 .Cover .Overlay:hover .Quotes{
     opacity: 1 !important;
-    transition: 1.8s;
+    transition: 0.9s;
 
 }
 

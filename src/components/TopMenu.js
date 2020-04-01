@@ -35,7 +35,9 @@ export default class TopMenu extends Component{
 			fontFamily : "Arial",
 			fontSize: "30px",
 			fontWeight: 100,
-			color: "#a1e6e3"
+			color: "#17a2b8" 
+			// color: "#a1e6e3" 
+			
 		} 
 		const navStyle = {
 			backgroundColor: "#1b262c" ,
