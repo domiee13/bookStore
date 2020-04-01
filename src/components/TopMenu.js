@@ -7,9 +7,13 @@ import {
 		Nav,
 		NavItem,
 		NavLink,
-		Button
+		UncontrolledDropdown,
+		DropdownToggle,
+		DropdownMenu,
+		DropdownItem,
+		NavbarText
 	} from 'reactstrap';
-	import {Link } from "react-router-dom";
+import {Link } from "react-router-dom";
 	
 export default class TopMenu extends Component{
 	constructor(props){
@@ -29,7 +33,7 @@ export default class TopMenu extends Component{
 	render(){
 		const linkStyle = {
 			textDecoration: "none",
-			color: "white"
+			color: "#17a2b8"		
 		}
 		const brandStyle = {
 			fontFamily : "Arial",
@@ -41,28 +45,30 @@ export default class TopMenu extends Component{
 		} 
 		const navStyle = {
 			backgroundColor: "#1b262c" ,
-			color: "#0f4c81"
+			color: "#17a2b8"
 		}
-	return (
-		<div>
-			<Navbar style={navStyle} expand="md">
-				<NavbarBrand style={brandStyle} href="/">b o o k S t o r e ʕ•́ᴥ•̀ʔっ♡</NavbarBrand>
-				<NavbarToggler onClick={this.toggle} />
-				<Collapse isOpen={this.state.isOpen} navbar>
-					<Nav className="ml-auto" navbar>
-					<NavItem>
+		return (
+			<div>
+				<Navbar style={navStyle}  expand="md">
+					<NavbarBrand style={brandStyle} href="/">b o o k S t o r e ʕ•́ᴥ•̀ʔっ</NavbarBrand>
+					<NavbarToggler onClick={this.toggle} />
+					<Collapse isOpen={this.isOpen} navbar>
+					<Nav className="mr-auto" navbar>
+						<NavItem>
 						<NavLink>
-							<Button color="info" outline ><Link style={linkStyle} to='/'>Home</Link></Button>
-					</NavLink>
-					</NavItem>
-					<NavItem>
-						<NavLink>
-						<Button color="info" outline ><Link style={linkStyle} to='/product'>Product</Link></Button>						</NavLink>
-					</NavItem>
+							<Link style={linkStyle} to="/product">Product</Link>
+						</NavLink>
+						</NavItem>
 					</Nav>
-				</Collapse>
-			</Navbar>
-	</div>
-	);
+					<NavLink>
+							<Link style={linkStyle} className="ml-auto" to="/signup">Sign Up</Link>
+					</NavLink>
+					<NavLink>
+							<Link style={linkStyle} className="ml-auto" to="/login">Log in</Link>
+					</NavLink>
+					</Collapse>
+				</Navbar>
+			</div>
+		);
 	}
 }
