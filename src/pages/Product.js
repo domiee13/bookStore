@@ -12,19 +12,40 @@ export default class Product extends Component{
        products: []
      }
    }
-   componentDidMount(){
-    axios.get("https://localhost:5000/api/products").then(res=>{
-      console.log(res); 
-      console.log("Bug cai dmm");
-    // this.setState({
-      //   products: res.data
-      // });
+  componentDidMount(){
+    axios.get("/api/products").then(res=>{
+      console.log(res.data); 
+    this.setState({
+        products: res.data
+      });
     });
     console.log("Component did mount");
   }
   render(){
     return(
-      <h2>This is Product site</h2>
+      <Container>
+      <h2>Products</h2>
+        <div className="Product">
+          <Row >
+            {
+              this.state.products.map((item)=>(
+                <Col sm="4">
+                <div>
+                <Card style={{marginBottom:"35px"}}>
+                  <CardImg top width="100%" src={item.imgUrl} alt="Card image cap" />
+                  <CardBody>
+                    <CardTitle style={{fontWeight:"bold"}}>{item.name}</CardTitle>
+                    <CardSubtitle>{item.author}</CardSubtitle>
+                    <Button color="primary" outline style={{marginTop:"10px"}}>Add to cart</Button>
+                  </CardBody>
+                </Card>
+              </div>
+              </Col>
+              ))
+            }
+            </Row>
+        </div>
+      </Container>
     );
   }
 }
