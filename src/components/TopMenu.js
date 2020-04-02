@@ -59,14 +59,14 @@ export default class TopMenu extends Component{
 							<Link style={linkStyle} to="/product">Product</Link>
 						</NavLink>
 						</NavItem>
-					</Nav>
+                    </Nav>
+                    </Collapse>
 					<NavLink>
 							<Link style={linkStyle} className="ml-auto" to="/signup">Sign Up</Link>
 					</NavLink>
 					<NavLink>
 							<Link style={linkStyle} className="ml-auto" to="/login">Log in</Link>
 					</NavLink>
-					</Collapse>
 				</Navbar>
 			</div>
 		);

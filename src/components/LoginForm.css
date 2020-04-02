@@ -1,0 +1,21 @@
+.SignUpForm{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 50px;
+}
+
+.SignUpForm .Form {
+    font-weight: bold;
+    font-size: 18px;
+    width: 40%;
+}
+
+.SignUpForm .Form .buttonGroup{
+    display: flex;
+    flex-direction: row;
+}
+
+.SignUpForm .Form .buttonGroup .login{
+    margin-bottom: 5px;
+}

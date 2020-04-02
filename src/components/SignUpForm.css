@@ -1,0 +1,21 @@
+.LoginForm{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 50px;
+}
+
+.LoginForm .Form {
+    font-weight: bold;
+    font-size: 18px;
+    width: 40%;
+}
+
+.LoginForm .Form .buttonGroup{
+    display: flex;
+    flex-direction: row;
+}
+
+.LoginForm .Form .buttonGroup .login{
+    margin-bottom: 5px;
+}

@@ -10,6 +10,8 @@ import {
 
 import Product from './pages/Product';
 import Cover from './components/Cover';
+import LoginForm from './components/LoginForm';
+import SignUpForm from './components/SignUpForm';
 
 function App() {
   return ( 
@@ -23,8 +25,8 @@ function App() {
             <h2>THIS IS HOME PAGE</h2>
           </Route>
           <Route path='/product' component = {Product}></Route>
-          <Route path='/login' ><h1>Login page</h1></Route>
-          <Route path='/signup'><h1>Signup page</h1></Route>
+          <Route path='/login' component={LoginForm}></Route>
+          <Route path='/signup' component={SignUpForm}></Route>
         </Switch>
       </div>
     </Router>
