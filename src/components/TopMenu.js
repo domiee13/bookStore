@@ -21,8 +21,15 @@ export default class TopMenu extends Component{
 		this.state = {
 			isOpen: false
 		};
-		this.toggle = this.toggle.bind(this);
+        this.toggle = this.toggle.bind(this);
+        // this.logOut = this.logOut.bind(this);
 	}	
+
+    // logOut(e){
+    //     e.preventDefault();
+    //     localStorage.removeItem('usertoken');
+    //     this.props.history.push('/');
+    // }
 
 	toggle(){
 		this.setState({
@@ -62,11 +69,14 @@ export default class TopMenu extends Component{
                     </Nav>
                     </Collapse>
 					<NavLink>
-							<Link style={linkStyle} className="ml-auto" to="/signup">Sign Up</Link>
+							<Link style={linkStyle} className="ml-auto" to="/register">Register</Link>
 					</NavLink>
 					<NavLink>
-							<Link style={linkStyle} className="ml-auto" to="/login">Log in</Link>
+							<Link style={linkStyle} className="ml-auto" to="/login">Login</Link>
 					</NavLink>
+					{/* <NavLink>
+                        <a href="" onClick={this.logOut}  className="nav-link">Logout</a>
+					</NavLink> */}
 				</Navbar>
 			</div>
 		);

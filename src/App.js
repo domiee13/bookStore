@@ -10,8 +10,8 @@ import {
 
 import Product from './pages/Product';
 import Cover from './components/Cover';
-import LoginForm from './components/LoginForm';
-import SignUpForm from './components/SignUpForm';
+import Login from './components/Login';
+import Register from './components/Register';
 
 function App() {
   return ( 
@@ -20,13 +20,13 @@ function App() {
         <TopMenu/>
         <Cover/>
         <Switch>
-          <Route exact path='/'> 
+          <Route exact path='/' component={Product}> 
           {/* Phai them exact, neu khong product se khong duoc render */}
-            <h2>THIS IS HOME PAGE</h2>
+            
           </Route>
-          <Route path='/product' component = {Product}></Route>
-          <Route path='/login' component={LoginForm}></Route>
-          <Route path='/signup' component={SignUpForm}></Route>
+          {/* <Route path='/product' component = {Product}></Route> */}
+          <Route path='/login' component={Login}></Route>
+          <Route path='/register' component={Register}></Route>
         </Switch>
       </div>
     </Router>
